@@ -1,0 +1,140 @@
+.footer {
+    background-color: $bg-color;
+    padding: 60px 0;
+
+    &__title {
+        margin-bottom: 20px;
+
+        font-weight: 900;
+        text-transform: uppercase;
+        color: $address;
+    }
+}
+.footer-nav-logo{
+    display: block;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    color: $primary-text-color;
+    margin-bottom: 20px;
+}
+.footer-logo-style{
+    color: $accent-color;
+}
+.location {
+    margin-right: 70px;
+}
+
+.address {
+    margin-top: 20px;
+    font-style: normal;
+    &__link, &__text{
+        margin-bottom: 9px;
+    
+        font-family: Roboto, sans-serif;
+        font-weight: 400;
+        line-height: 1.7;
+    }
+    &__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
+    &__text {
+        color: $address;
+    }
+    &__link {
+        color: rgba(255, 255, 255, 0.6);
+        font-style: normal;
+    }
+}
+.container.position {
+    display: flex;
+    align-items: baseline;
+}
+.network{
+    margin-right: 93px;
+    &__list {
+        display: flex;
+    }
+    &__item:not(:last-child) {
+        margin-right: 10px;
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        width: 44px;
+        height: 44px;
+    
+        border: none;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        fill: $address;
+    
+        transition: background-color 250ms $transition;
+
+        &:focus, &:hover {
+            background-color: $accent-color;
+        }
+    }
+    &__icon {
+        width: 20px;
+        height: 20px;
+        
+        transition: fill 250ms $transition;
+        &:hover, &:focus {
+            fill: $address;
+        }
+    }
+}
+
+.subscription{
+    &__form{
+        display: flex;
+    }
+    &__input{
+        width: 335px;
+        height: 50px;
+    
+        margin-right: 12px;
+        padding: 15px 16px;
+    
+        background-color: $bg-color;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        color: white;
+    
+        transition: color 250ms $transition, background-color 250ms $transition, filter 250ms $transition;
+        &:focus{
+            background-color: $bg-color;
+            color: white;
+        }
+    }
+    &__icon{
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        margin-left: 10px;
+    }
+    &__button{
+        width: 200px;
+        height: 50px;
+        padding: 10px 29px 10px 0;
+    
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 1.8;
+        letter-spacing: 0.06em;
+        text-align: center;
+        color: $address;
+    
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        background-color: $accent-color;
+    
+        cursor: pointer;
+    }
+}

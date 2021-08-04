@@ -1,0 +1,153 @@
+.header {
+    border-bottom: 1px solid #ececec;
+}
+
+
+/* logo */
+
+.logo-style {
+    color: $accent-color;
+}
+
+.secondary-logo {
+    color: $address;
+}
+
+
+/* nav */
+.header {
+    border-bottom: 1px solid #ececec;
+}
+
+.logo-style {
+    color: $accent-color;
+}
+
+.secondary-logo {
+    color: $address;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    &__logo{
+        margin-right: 93px;
+
+        font-family: Raleway, sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.2;
+        color: $primary-text-color;
+    
+        transition: color 250ms $transition;
+
+        &:hover, &:focus{
+            color: $accent-color;
+        }
+    }
+}
+
+.site-nav {
+    display: flex;
+    justify-content: space-between;
+
+    &__item{
+        position: relative;
+
+        display: inline-flex;
+
+        text-align: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        color: $title-text-color;
+        fill: $title-text-color;
+    
+
+        &:not(:last-child){
+            margin-right: 50px;
+        }
+    }
+
+    &__link{
+        display: block;
+
+        padding: 32px 0;
+    
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        align-items: center;
+        color: $primary-text-color;
+    
+        transition: color 250ms $transition;
+
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        
+            display: block;
+            width: 100%;
+            height: 4px;
+        
+            background-color: $accent-color;
+            border-radius: 2px;
+        
+            opacity: 0;
+            transition:opacity 250ms $transition;
+        }
+
+        &--current{
+            color: $accent-color;
+            border-bottom: 4px solid $accent-color
+        }
+
+        &:hover,&:focus {
+            color: $accent-color;
+
+            &::after{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.auth-nav{
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+
+    &__item{
+        &:not(:last-child){
+            margin-right: 50px;
+        }
+
+        &:hover, &:focus{
+            color: $title-text-color;
+            fill: $accent-color;
+            }
+    }
+
+    &__link{
+        display: flex;
+        justify-content: center;
+    
+        text-align: center;
+        align-items: center;
+        color: $title-text-color;
+    
+        transition: color 250ms $transition;
+
+        &:hover, &:focus{
+            cursor: pointer;
+            color: $accent-color;
+            fill: $accent-color;
+        }
+    }
+
+    &__icon{
+        margin-right: 10px;
+    }
+
+}
