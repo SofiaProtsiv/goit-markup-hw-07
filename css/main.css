@@ -18,7 +18,7 @@ p {
   margin: 0;
 }
 
-.list {
+.site-nav__list, .auth-nav__list, .features__list, .work__list, .team__list, .social-media__list, .clients__list, .address__list, .network__list, .filter-nav__list, .cardset__list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -142,20 +142,6 @@ textarea {
   border-bottom: 1px solid #ececec;
 }
 
-/* logo */
-.logo-style {
-  color: #2196f3;
-}
-
-.secondary-logo {
-  color: #ffffff;
-}
-
-/* nav */
-.header {
-  border-bottom: 1px solid #ececec;
-}
-
 .logo-style {
   color: #2196f3;
 }
@@ -191,7 +177,7 @@ textarea {
   color: #2196f3;
 }
 
-.site-nav {
+.site-nav__list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -267,7 +253,7 @@ textarea {
   opacity: 1;
 }
 
-.auth-nav {
+.auth-nav__list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -672,13 +658,6 @@ textarea {
           background-size: contain;
 }
 
-.work__image {
-  position: relative;
-  width: 100%;
-  -webkit-background-size: contain;
-          background-size: contain;
-}
-
 .work__title {
   position: absolute;
   width: 100%;
@@ -874,16 +853,9 @@ textarea {
   margin-right: 70px;
 }
 
-.address {
+.address__list {
   margin-top: 20px;
   font-style: normal;
-}
-
-.address__link, .address__text {
-  margin-bottom: 9px;
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
 }
 
 .address__item:not(:last-child) {
@@ -897,6 +869,14 @@ textarea {
 .address__link {
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
+}
+
+.address__link,
+.address__text {
+  margin-bottom: 9px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
 .container.position {

@@ -9,14 +9,13 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+.hero__title{
+    margin-bottom: 30px;
 
-    &__title{
-        margin-bottom: 30px;
-
-        font-weight: 900;
-        font-size: 44px;
-        text-align: center;
-        letter-spacing: 0.06em;
-        color: $address;
-    }
+    font-weight: 900;
+    font-size: 44px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $address;
 }

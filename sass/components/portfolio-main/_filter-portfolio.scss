@@ -1,0 +1,11 @@
+.filter-nav__list {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 50px;
+}
+.filter-nav__item:not(:first-child) {
+    margin-left: 8px;
+}

@@ -1,5 +1,5 @@
-.clients{
-    &__list {
+.clients__list {
+    @extend %list;
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
@@ -7,7 +7,7 @@
     transition: fill 250ms $transition, background 250ms $transition;
     }
 
-    &__link {
+    .clients__link {
         display: flex;
         padding: 16px 32px;
     
@@ -25,7 +25,7 @@
             }
         }
 
-    &__icon {
+    .clients__icon {
         height: 60px;
         width: 106px;
         fill: $fill;
@@ -40,4 +40,3 @@
         fill: $accent-color;
         }
     }
-}
