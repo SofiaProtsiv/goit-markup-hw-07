@@ -1,5 +1,4 @@
-.social-media__list {
-    @extend %list;
+.social-media {
     display: flex;
     justify-content: center;
 }
@@ -20,16 +19,16 @@
         background-color: $address;
         fill: $fill;
     
-        transition: background-color 250ms $transition;
+        transition: background-color 250ms $transition, fill 250ms $transition;
         &:focus, &:hover {
             fill: $address;
             background-color: $accent-color;
+        }
+        &:hover .social-media__icon, &:focus .social-media__icon {
+            fill: $address;
         }
     }
 .social-media__icon {
     width: 20px;
     height: 20px;
-        &:hover, &:focus {
-            fill: $address;
-        }
 }

@@ -1,5 +1,4 @@
-.site-nav__list {
-    @extend %list;
+.site-nav {
     display: flex;
     justify-content: space-between;
 }

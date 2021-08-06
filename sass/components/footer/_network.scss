@@ -6,7 +6,6 @@
     margin-right: 93px;
 }
 .network__list {
-        @extend %list;
         display: flex;
     }
 .network__item:not(:last-child) {

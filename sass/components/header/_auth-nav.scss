@@ -1,5 +1,4 @@
-.auth-nav__list{
-    @extend %list;
+.auth-nav{
     display: flex;
     justify-content: space-between;
     margin-left: auto;
@@ -34,5 +33,6 @@
 
     .auth-nav__icon{
         margin-right: 10px;
+        fill: #757575;
     }
 

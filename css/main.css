@@ -18,7 +18,7 @@ p {
   margin: 0;
 }
 
-.site-nav__list, .auth-nav__list, .features__list, .work__list, .team__list, .social-media__list, .clients__list, .address__list, .network__list, .filter-nav__list, .cardset__list {
+ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -35,8 +35,15 @@ p {
   padding-bottom: 94px;
 }
 
-.section.color {
+.section--color {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: #f5f4fa;
+}
+
+.section--no-padding {
+  padding-bottom: 94px;
+  padding-top: 0;
 }
 
 .section__title {
@@ -81,10 +88,6 @@ textarea {
   margin: 0;
 }
 
-.no-padding {
-  padding-top: 0;
-}
-
 .button {
   display: inline-block;
   padding: 6px 22px;
@@ -112,9 +115,9 @@ textarea {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: #2196f3;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button--primary:focus, .button--primary:hover {
@@ -125,9 +128,9 @@ textarea {
 
 .button--secondary {
   background-color: #f5f4fa;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button--secondary:focus, .button--secondary:hover {
@@ -177,7 +180,7 @@ textarea {
   color: #2196f3;
 }
 
-.site-nav__list {
+.site-nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -253,7 +256,7 @@ textarea {
   opacity: 1;
 }
 
-.auth-nav__list {
+.auth-nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -302,10 +305,10 @@ textarea {
 
 .auth-nav__icon {
   margin-right: 10px;
+  fill: #757575;
 }
 
 .hero {
-  display: block;
   padding: 200px 0;
   text-align: center;
   background: #2f303a;
@@ -430,6 +433,7 @@ textarea {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: left;
+  margin: 0;
   margin-bottom: 10px;
 }
 
@@ -590,7 +594,7 @@ textarea {
   border: none;
 }
 
-.features__list {
+.features {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -639,7 +643,7 @@ textarea {
   line-height: 1.7;
 }
 
-.work__list {
+.work {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -671,7 +675,7 @@ textarea {
   background: rgba(47, 48, 58, 0.8);
 }
 
-.team__list {
+.team {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -714,7 +718,7 @@ textarea {
   color: #757575;
 }
 
-.social-media__list {
+.social-media {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -748,9 +752,9 @@ textarea {
           border-radius: 50%;
   background-color: #ffffff;
   fill: #AFB1B8;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-media__link:focus, .social-media__link:hover {
@@ -758,16 +762,16 @@ textarea {
   background-color: #2196f3;
 }
 
+.social-media__link:hover .social-media__icon, .social-media__link:focus .social-media__icon {
+  fill: #ffffff;
+}
+
 .social-media__icon {
   width: 20px;
   height: 20px;
 }
 
-.social-media__icon:hover, .social-media__icon:focus {
-  fill: #ffffff;
-}
-
-.clients__list {
+.clients {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -794,9 +798,9 @@ textarea {
   -webkit-border-radius: 4px;
           border-radius: 4px;
   border: 1px solid #AFB1B8;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients__link:focus, .clients__link:hover {
@@ -814,13 +818,9 @@ textarea {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients__item:hover .clients__icon, .clients__item:focus .clients__icon {
-  color: #2196f3;
-  fill: #2196f3;
-}
-
 .clients__link:hover .clients__icon, .clients__link:focus .clients__icon {
   fill: #2196f3;
+  color: #2196f3;
 }
 
 .footer {
@@ -853,7 +853,7 @@ textarea {
   margin-right: 70px;
 }
 
-.address__list {
+.address {
   margin-top: 20px;
   font-style: normal;
 }
@@ -1003,7 +1003,7 @@ textarea {
   cursor: pointer;
 }
 
-.filter-nav__list {
+.filter-nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1023,7 +1023,7 @@ textarea {
   margin-left: 8px;
 }
 
-.cardset__list {
+.cardset {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
